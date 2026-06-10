@@ -10,12 +10,12 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "us-east-1"
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
-  instance_type = "t2.micro"
+  ami           = "ami-091138d0f0d41ff90" # Sahi aur fresh Free Tier AMI
+  instance_type = "t3.micro"               # Sahi Free Tier instance type
 
   tags = {
     Name = "Terraform_Demo"
